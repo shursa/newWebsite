@@ -1,0 +1,36 @@
+@mixin btn($padding, $fontSize) {
+  display: block;
+  width: max-content;
+  font-family: $extraBold-word;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  padding: $padding;
+  font-size: $fontSize;
+  border-radius: 5px;
+  background-color: $crimson;
+  transition: .1s;
+  &:hover {
+    transform: scale(1.02);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@mixin bottomLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: $opacityGrey;
+  transition: .2s;
+}
+
+@mixin crimsonPoints {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: $crimson;
+}

@@ -1,0 +1,367 @@
+.programm {
+    padding: 70px 0;
+    background-color: $grey;
+    &__width {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    h2 {
+        margin-bottom: 14px;
+    }
+    h3 {
+        color: $white;
+    }
+    h4 {
+        color: $textGrey;
+        line-height: 150%;
+        transition: .2s;
+        br {
+            display: none;
+        }
+    }
+
+    &__points {
+        display: flex;
+        margin: 20px 0 27px 0;
+    }
+    &__point {
+        @include crimsonPoints;
+        margin-right: 7px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__blocks {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 140px 140px;
+        gap: 15px;
+        grid-template-areas:
+            "one one one two two two"
+            "three three four four five five"
+    ;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        background-color: $opacityWhite;
+        transition: .2s;
+        &:first-child {
+            grid-area: one;
+        }
+        &:nth-child(2) {
+            grid-area: two;
+        }
+        &:nth-child(3) {
+            grid-area: three;
+        }
+        &:nth-child(4) {
+            grid-area: four;
+        }
+        &:nth-child(5) {
+            grid-area: five;
+        }
+    }
+    &__block:hover {
+        background-color: $white;
+        .programm__block-title-text {
+            margin-bottom: 10px;
+        }
+        .programm__block-line {
+            background-color: $crimson;
+        }
+        .programm__block-text {
+            max-height: 75px;
+        }
+        h4 {
+            font-size: $fs18;
+        }
+        svg {
+            width: 35px;
+        }
+    }
+    &__block-title-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .2s;
+    }
+    &__block-title svg {
+        width: 60px;
+        margin-right: 10px;
+        fill: $crimson;
+        transition: .2s;
+    }
+    &__block-text {
+        padding: 0 50px;
+        font-family: $regular-word;
+        font-size: $fs14;
+        color: $textGrey;
+        line-height: 165%;
+        max-height: 0;
+        overflow: hidden;
+        transition: .2s
+    }
+    &__block-link {
+        color: $blue;
+    }
+    &__block-details {
+        display: block;
+        margin-top: 5px;
+        color: $textGrey;
+        font-family: $semiBold-word;
+        transition: .2s;
+        &:hover {
+            text-shadow: 0px 0px #000;
+        }
+    }
+    &__block-line {
+        @include bottomLine;
+        background-color: #6e798e;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .programm {
+        h2 {
+            margin-bottom: 12px;
+        }
+        padding: 60px 0;
+        &__width {
+            max-width: 1200px;
+        }
+
+        &__points {
+            margin: 18px 0 25px 0;
+        }
+
+        &__blocks {
+            grid-template-rows: 130px 130px;
+            gap: 10px;
+        }
+        &__block:hover {
+            h4 {
+                font-size: $fs16;
+            }
+        }
+        &__block-title svg {
+            width: 50px;
+        }
+        &__block-text {
+            font-size: $fs12;
+            padding: 0 40px;
+        }
+    }
+}
+@media screen and (max-width: 1279px) {
+    .programm {
+        padding: 50px 0;
+        h2 {
+            margin-bottom: 10px;
+        }
+        &__width {
+            max-width: 970px;
+        }
+
+        &__points {
+            margin: 16px 0 23px 0;
+        }
+        &__point {
+            margin-right: 5px;
+        }
+
+        &__block:hover {
+            h4 {
+                font-size: $fs14;
+            }
+            .programm__block-title svg {
+                width: 30px;
+            }
+        }
+        &__block-title svg {
+            width: 40px;
+        }
+        &__block-text {
+            padding: 0 20px;
+            line-height: 130%;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .programm {
+        padding: 50px 20px;
+        h2 {
+            margin-bottom: 12px;
+        }
+        h4 br {
+            display: block;
+        }
+        &__width {
+            max-width: 100%;
+        }
+
+        &__points {
+            margin: 18px 0 25px 0;
+        }
+        &__point {
+            width: 7px;
+            height: 7px;
+            margin-right: 7px;
+        }
+
+        &__blocks {
+            display: block;
+        }
+        &__block {
+            cursor: pointer;
+            padding: 20px 50px 25px 50px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        &__block:hover {
+            background-color: $opacityWhite;
+            .programm__block-line {
+                background-color: #6e798e;
+            }
+            .programm__block-text {
+                max-height: 0;
+            }
+            h4 {
+                font-size: $fs18;
+            }
+            .programm__block-text-active {
+                max-height: 45px;
+            }
+            .programm__block-title-text {
+                margin-bottom: 0;
+            }
+            .programm__block-title svg {
+                width: 50px;
+            }
+            .programm__block-line-active {
+                background-color: $crimson;
+            }
+        }
+        &__block-active {
+            background-color: $white;
+        }
+        &__block-active:hover {
+            background-color: $white;
+        }
+        &__block-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__block-title svg {
+            width: 50px;
+        }
+        &__arrow {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            &-elem {
+                position: absolute;
+                width: 50%;
+                height: 3px;
+                background-color: #6e798e;
+                top: 48%;
+                transition: .1s;
+                &:first-child {
+                    left: 2px;
+                    transform: rotate(35deg);
+                }
+                &:last-child {
+                    right: 2px;
+                    transform: rotate(-35deg);
+                }
+            }
+            &-active {
+                .programm__arrow-elem:first-child {
+                    transform: rotate(-35deg);
+                }
+                .programm__arrow-elem:last-child {
+                    transform: rotate(35deg);
+                }
+            }
+        }
+        &__block-text {
+            padding: 0;
+            font-size: $fs16;
+        }
+        &__block-text-active {
+            max-height: 45px;
+            margin-top: 10px;
+        }
+        &__block-line-active {
+            background-color: $crimson;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .programm {
+        h2 {
+            margin-bottom: 10px;
+        }
+        &__block {
+            padding: 25px 35px;
+        }
+        &__block:hover {
+            .programm__block-text-active {
+                max-height: 85px;
+            }
+            .programm__block-title svg {
+                width: 45px;
+            }
+        }
+        &__block-title svg {
+            width: 45px;
+        }
+        &__points {
+            margin: 16px 0 23px 0;
+        }
+        &__point {
+            width: 5px;
+            height: 5px;
+            margin-right: 5px;
+        }
+        &__block-text-active {
+            max-height: 85px;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .programm {
+        h4 {
+            line-height: 130%;
+        }
+        &__block {
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        &__block:hover {
+            .programm__block-text-active {
+                max-height: 95px;
+            }
+        }
+        &__arrow {
+            flex-shrink: 0;
+            width: 26px;
+            height: 25px;
+        }
+        &__block-text {
+            font-size: $fs14;
+        }
+        &__block-text-active {
+            max-height: 95px;
+            margin-top: 10px;
+        }
+        &__block-line {
+            height: 4px;
+        }
+    }
+}

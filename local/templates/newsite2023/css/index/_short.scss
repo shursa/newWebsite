@@ -1,0 +1,191 @@
+.short {
+    background-color: $grey;
+    padding: 50px 0;
+
+    h5 {
+        color: $ultraLightenGrey;
+    }
+
+    &__width {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__get {
+        margin-right: 130px;
+    }
+    &__title {
+        color: $lightenGrey;
+        font-size: $fs16;
+        text-transform: uppercase;
+        font-family: $black-word;
+    }
+    &__line {
+        margin: 10px 0 20px 0;
+        width: 30%;
+        height: 1px;
+        background-color: $ultraOpacityWhite;
+    }
+
+    &__services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 44px;
+    }
+    &__service {
+        color: $lightenGrey;
+        font-size: $fs14;
+        font-family: $regular-word;
+        line-height: 165%;
+        margin-top: 4px;
+    }
+
+    &__contact-text {
+        text-align: right;
+        color: $ultraLightenGrey;
+        font-family: $semiBold-word;
+        font-size: $fs14;
+        line-height: 165%;
+    }
+    &__btn {
+        @include btn(14px 33px, $fs16);
+        margin: 30px 0 0 auto;
+    }
+
+}
+@media screen and (max-width: 1500px) {
+    .short {
+        padding: 40px 0;
+        &__width {
+            max-width: 1200px;
+        }
+        &__get {
+            margin-right: 0px;
+        }
+        &__service {
+            font-size: $fs12;
+        }
+        &__contact-text {
+            font-size: $fs12;
+        }
+    }
+}
+@media screen and (max-width: 1279px) {
+    .short {
+        padding: 30px 0;
+        &__width {
+            max-width: 970px;
+        }
+        &__services {
+            gap: 20px;
+        }
+        &__service {
+            font-size: $fs10;
+        }
+        &__contact-text {
+            font-size: $fs10;
+        }
+        &__btn {
+            font-size: $fs14;
+            margin: 20px 0 0 auto;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .short {
+        padding: 45px 20px;
+        &__width {
+            max-width: 100%;
+        }
+        &__content {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__title {
+            font-size: $fs18;
+        }
+        &__line {
+            width: 60%;
+        }
+        &__services {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 18%;
+        }
+        &__service {
+            font-size: $fs16;
+        }
+        h5 {
+            margin-bottom: 5px;
+        }
+
+        &__contact {
+            width: 100%;
+        }
+        &__contact::before {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 1px;
+            background-color: $ultraOpacityWhite;
+            margin: 20px 0;
+        }
+        &__contact-text {
+            width: 80%;
+            font-size: $fs16;
+            text-align: left;
+        }
+        &__btn {
+            font-size: $fs16;
+            margin-left: 0;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .short {
+        &__title {
+            font-size: $fs16;
+        }
+        &__services {
+            column-gap: 10%;
+        }
+        &__service {
+            font-size: $fs14;
+        }
+
+        &__contact-text {
+            font-size: $fs14;
+        }
+        &__btn {
+            font-size: $fs14;
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+    .short {
+        &__line {
+            width: 265px;
+            margin: 20px 0;
+        }
+        &__services {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        h5 {
+            margin-bottom: 0;
+        }
+        &__contact-text {
+            width: 100%;
+        }
+        &__btn {
+            width: 100%;
+            text-align: center;
+        }
+        &__contact::before {
+            width: 265px;
+        }
+    }
+}

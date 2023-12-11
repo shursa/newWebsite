@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import "css/standart/fonts";
+@import "css/variables-mixins/variables";
+@import "css/variables-mixins/mixins";
+@import "css/standart/standart-styles";
+@import "css/standart/header";
+@import "css/standart/crumbs";
+@import "css/index/offer";
+@import "css/index/promotion";
+@import "css/index/format";
+@import "css/index/document";
+@import "css/index/pay";
+@import "css/index/programm";
+@import "css/index/partners";
+@import "css/index/telegram";
+@import "css/news/news-nav";
+@import "css/news/news-detail";
+@import "css/catalog/catalogs";
+@import "css/standart/footer";
+@import "css/test-slide";
+
+
+// Цвета хедера
+
+.header__bottom {
+  .header__nav-link {
+    color: $white;
+    &:hover {
+      background-color: $opacityGrey;
+    }
+  }
+  .header__nav-popup-arrow-elem {
+    background-color: $white;
+  }
+  .header__nav-popup-background-up {
+    background-color: $opacityGrey;
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
+  .header__bottom {
+    .header__nav-link {
+      color: $textGrey;
+      &:hover {
+        background-color: $opacityLightenBlue;
+      }
+    }
+    .header__nav-popup-arrow-elem {
+      background-color: $textGrey;
+    }
+    .header__nav-popup-background-up {
+      background-color: $opacityLightenBlue;
+    }
+  }
+}

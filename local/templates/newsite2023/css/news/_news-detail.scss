@@ -1,0 +1,103 @@
+.news-detail {
+  margin-top: 50px;
+  h1 {
+    color: $textGrey;
+    letter-spacing: 0;
+    line-height: 125%;
+    margin-bottom: 25px;
+  }
+  &__img-block {
+    position: relative;
+    width: max-content;
+    float: left;
+    padding: 0 30px 5px 0;
+  }
+  &__img {
+    width: 450px;
+    height: auto;
+  }
+  &__date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: $crimson;
+    color: $white;
+    padding: 6px;
+    font-family: $bold-num;
+    font-size: $fs16;
+  }
+  &__text {
+    font-family: $medium-word;
+    font-size: $fs16;
+    color: $textGrey;
+    line-height: 150%;
+  }
+  &__source {
+    font-family: $bold-word;
+    font-size: $fs20;
+    color: $textGrey;
+    margin: 30px 0;
+    a {
+      color: $crimson;
+    }
+  }
+}
+@media screen and (max-width: 1279px) {
+  .news-detail {
+    &__text {
+      font-size: $fs14;
+    }
+    &__img {
+      width: 360px;
+    }
+    &__source {
+      font-size: $fs18;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .news-detail {
+    h1 {
+      font-size: $fs28;
+    }
+    &__text {
+      font-size: $fs16;
+    }
+    &__source {
+      font-size: $fs20;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .news-detail {
+    margin-top: 35px;
+    h1 {
+      margin: 25px 0;
+    }
+    &__img-block {
+      float: none;
+      width: 100%;
+      padding: 0;
+    }
+    &__img {
+      width: 100%;
+    }
+    &__source {
+      font-size: $fs18;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .news-detail {
+    h1 {
+      font-size: 23px;
+      margin: 15px 0;
+    }
+    &__text {
+      font-size: $fs14;
+    }
+    &__source {
+      font-size: $fs16;
+    }
+  }
+}

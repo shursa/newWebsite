@@ -1,0 +1,406 @@
+.document {
+    position: relative;
+    overflow: hidden;
+    &__background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: url(../../../../../images/img-index/document-background.webp) no-repeat;
+        background-size: cover;
+        transform: scaleY(1.5);
+    }
+
+    h2 {
+        margin-bottom: 14px;
+    }
+    h3 {
+        color: $white;
+    }
+    h4 {
+        color: $white;
+        margin-bottom: 5px;
+    }
+
+    &__background-color {
+        background-color: #1f2938e0;
+        padding: 70px 0;
+    }
+    &__width {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: flex;
+    }
+    &__sample {
+        margin-right: 47px;
+    }
+    &__sample-wrapper-img {
+        position: relative;
+        padding: 15px;
+    }
+    &__sample-element {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        background-color: $darkenGrey;
+        border-radius: 0 5px 0 5px;
+    }
+    &__sample-text {
+        position: absolute;
+        bottom: 60px;
+        right: 0;
+        background-color: #1f2938e6;
+        padding: 15px 25px;
+        color: $white;
+        font-family: $regular-word;
+        font-size: $fs20;
+    }
+    &__sample-wrapper-scroll {
+        overflow: hidden;
+        width: 644px;
+    }
+    &__sample-scroll {
+        display: flex;
+        position: relative;
+        transition: .5s;
+        right: 0;
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        flex-shrink: 0;
+    }
+    &__buttons {
+        margin: 0 auto;
+        width: max-content;
+    }
+    &__btn {
+        width: 40px;
+        height: 10px;
+        background-color: #53606F;
+        border: none;
+        margin-right: 4px;
+        cursor: pointer;
+        transition: .2s;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__btn-active {
+        background-color: $white;
+        pointer-events: none;
+    }
+    &__btn:hover {
+        background-color: $white;
+    }
+
+    &__text {
+        padding-top: 15px;
+    }
+    &__points {
+        display: flex;
+        margin: 20px 0;
+    }
+    &__point {
+        @include crimsonPoints;
+        margin-right: 7px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__description {
+        font-family: $medium-word;
+        font-size: $fs14;
+        line-height: 170%;
+        color: $white;
+    }
+    &__ways {
+        margin: 25px 0 15px 0;
+        color: #7c8592;
+        font-size: $fs16;
+        text-transform: uppercase;
+        font-family: $extraBold-word;
+    }
+    &__mail {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    &__mail-explanation {
+        width: 48%;
+        font-size: $fs14;
+        font-family: $medium-word;
+        line-height: 170%;
+        color: $white;
+        border: 1px solid #7c8592;
+        border-radius: 10px;
+        padding: 15px 20px;
+    }
+    &__mail-explanation a {
+        color: $white;
+        text-decoration: underline 1px;
+        transition: .2s;
+        &:hover {
+            color: $crimson;
+        }
+    }
+    &__edu {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: $white;
+        border-radius: 10px;
+        flex-shrink: 0;
+    }
+    &__edu-title {
+        margin-right: 13px;
+    }
+    &__edu-title svg {
+        display: block;
+        width: 80px;
+    }
+    &__edu-title h4 {
+        display: none;
+    }
+    &__edu-text, &__edu-text a {
+        font-size: $fs14;
+        font-family: $medium-word;
+        line-height: 170%;
+        color: $textGrey;
+    }
+    &__edu-text a {
+        color: $blue;
+    }
+    &__edu-text h4 {
+        color: $textGrey;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .document {
+        h2 {
+            margin-bottom: 12px;
+        }
+        &__background-color {
+            padding: 60px 0;
+        }
+        &__width {
+            max-width: 1200px;
+        }
+        &__sample-wrapper-scroll {
+            width: 570px;
+        }
+        &__points {
+            margin: 18px 0;
+        }
+        &__description {
+            font-size: $fs12;
+        }
+        &__ways {
+            font-size: $fs14;
+        }
+        &__mail-explanation {
+            width: 49%;
+            padding: 12px 15px;
+            font-size: $fs12;
+        }
+        &__edu {
+            padding: 12px 15px;
+        }
+        &__edu-text, &__edu-text a {
+            font-size: $fs12;
+        }
+    }
+}
+@media screen and (max-width: 1279px) {
+    .document {
+        h2 {
+            margin-bottom: 10px;
+        }
+        &__width {
+            max-width: 970px;
+        }
+        &__content {
+            align-items: center;
+        }
+        &__background-color {
+            padding: 50px 0;
+        }
+        &__sample {
+            margin-right: 30px;
+        }
+        &__sample-wrapper-scroll {
+            width: 470px;
+        }
+        &__points {
+            margin: 16px 0;
+        }
+        &__point {
+            margin-right: 5px;
+        }
+        &__ways {
+            font-size: $fs12;
+            margin: 20px 0 10px 0;
+        }
+        &__mail {
+            margin-bottom: 20px;
+        }
+        h4 {
+            margin-bottom: 7px;
+        }
+        &__mail-explanation {
+            line-height: 150%;
+        }
+        &__edu {
+            padding: 9px 12px;
+        }
+        &__edu-text {
+            line-height: 150%;
+        }
+        &__description {
+            line-height: 150%;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .document {
+        h2 {
+            margin-bottom: 12px;
+        }
+        &__background-color {
+            padding: 50px 20px;
+        }
+        &__width {
+            max-width: 100%;
+        }
+
+        &__wrapper-text-top {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__points {
+            margin: 18px 0;
+        }
+        &__point {
+            width: 7px;
+            height: 7px;
+            margin-right: 7px;
+        }
+        &__sample {
+            margin: 18px 0 0 0;
+            max-width: 90%;
+            flex-shrink: 0;
+        }
+        &__sample-wrapper-scroll {
+            width: 100%;
+        }
+        &__sample-wrapper-img {
+            width: 100%;
+        }
+        &__sample-text {
+            font-size: $fs16;
+            bottom: 30px;
+        }
+
+        &__description {
+            font-size: $fs16;
+        }
+        &__ways {
+            font-size: $fs18;
+            margin: 30px 0 20px 0;
+        }
+        &__mail {
+            margin-bottom: 30px;
+        }
+        &__mail-explanation {
+            font-size: $fs16;
+        }
+        &__edu {
+            padding: 15px;
+        }
+        &__edu-text, &__edu-text a {
+            font-size: $fs16;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .document {
+        h2 {
+            margin-bottom: 10px;
+        }
+        &__points {
+            margin: 16px 0;
+        }
+        &__point {
+            width: 5px;
+            height: 5px;
+            margin-right: 5px;
+        }
+        &__description {
+            font-size: $fs14;
+        }
+        &__ways {
+            font-size: $fs14;
+        }
+        &__mail-explanation {
+            font-size: $fs14;
+        }
+        &__edu-text, &__edu-text a {
+            font-size: $fs14;
+        }
+    }
+}
+@media screen and (max-width: 680px) {
+    .document {
+        &__mail {
+            flex-direction: column;
+        }
+        &__mail-explanation:first-child {
+            margin: 0 0 20px 0;
+        }
+        &__mail-explanation {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .document {
+        &__sample {
+            max-width: 100%;
+        }
+        &__sample-text {
+            font-size: $fs14;
+        }
+        &__edu {
+            display: block;
+            padding: 12px 15px;
+        }
+        &__edu-text, &__edu-text a {
+            font-size: $fs12;
+        }
+        &__edu-text h4 {
+            display: none;
+        }
+        &__edu svg {
+            width: 40px;
+            margin-right: 8px;
+        }
+        &__edu-title {
+            display: flex;
+            align-items: center;
+            margin: 0 0 8px 0;
+        }
+        &__edu-title h4 {
+            display: block;
+            margin: 0;
+            color: $textGrey;
+        }
+    }
+}

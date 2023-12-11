@@ -1,0 +1,256 @@
+.main-news {
+    background-color: #fafafa;
+}
+.news {
+    padding: 100px 0;
+    h2 {
+        font-size: $fs20;
+        color: $textGrey;
+        text-transform: uppercase;
+    }
+
+    &__width {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    &__card {
+        position: relative;
+        padding: 15px 15px 67px 15px;
+        border: 1px solid #DBE0E4;
+        background-color: $white;
+    }
+
+    &__img {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__date {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: $crimson;
+        color: $white;
+        padding: 6px;
+        font-family: $bold-num;
+        font-size: $fs16;
+    }
+
+    &__text {
+        margin-top: 20px;
+    }
+
+    &__card-title {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    &__card-title-line {
+        width: 3px;
+        height: 44px;
+        background-color: $crimson;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    &__description {
+        font-family: $medium-word;
+        line-height: 150%;
+        font-size: $fs16;
+    }
+
+    &__read {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: $textGrey;
+        font-family: $extraBold-word;
+        font-size: $fs16;
+    }
+
+    &__nav {
+        margin-top: 50px;
+        font-size: $fs16;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            font-family: $medium-num;
+            width: 60px;
+            height: 20px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: .2s;
+            width: 100%;
+            height: 100%;
+            &:hover {
+                color: $white;
+                background: $crimson;
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+        &-page, &-active {
+            margin: 0 2px;
+        }
+        &-page {
+            border: 1px solid $crimson;
+            a {
+                color: $crimson;
+                text-align: center;
+            }
+        }
+        &-active {
+            background: $crimson;
+            color: $white;
+            text-align: center;
+        }
+        &-next, &-prev {
+            display: block;
+            border: 1px solid $crimson;
+            margin: 0 20px;
+            text-align: center;
+            a {
+                text-align: center;
+            }
+            svg {
+                height: 70%;
+                fill: $crimson;
+                transition: .2s;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1500px) {
+    .news {
+        h2 {
+            font-size: $fs16;
+        }
+        &__width {
+            max-width: 1200px;
+        }
+        &__cards {
+            gap: 15px;
+        }
+        &__date, &__description, &__read {
+            font-size: $fs14;
+        }
+        &__card-title-line {
+            height: 35px;
+        }
+    }
+}
+@media screen and (max-width: 1279px) {
+    .news {
+        padding: 60px 0;
+        h2 {
+            font-size: $fs14;
+        }
+        &__width {
+            max-width: 970px;
+        }
+        &__cards {
+            gap: 10px;
+            margin-top: 30px;
+        }
+        &__date, &__description, &__read {
+            font-size: $fs12;
+        }
+        &__card-title-line {
+            height: 30px;
+        }
+        &__nav {
+            font-size: $fs14;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .news {
+        padding: 80px 20px;
+        h2 {
+            font-size: $fs18;
+        }
+        &__width {
+            max-width: 100%;
+        }
+        &__cards {
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        &__date, &__description, &__read {
+            font-size: $fs16;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .news {
+        h2 {
+            font-size: $fs14;
+        }
+        &__date, &__description, &__read {
+            font-size: $fs12;
+        }
+        &__nav {
+            font-size: $fs12;
+            li {
+                width: 50px;
+                height: 16px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .news {
+        &__cards {
+            grid-template-columns: 1fr;
+        }
+        h2 {
+            font-size: $fs16;
+        }
+        &__date, &__description, &__read {
+            font-size: $fs14;
+        }
+        &__nav {
+            font-size: 0;
+            a {
+                border-radius: 50%;
+            }
+            li.news__nav-active, li.news__nav-page {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                margin: 0 5px;
+            }
+            li.news__nav-prev, li.news__nav-next {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                svg {
+                    height: 45%;
+                }
+            }
+        }
+    }
+}

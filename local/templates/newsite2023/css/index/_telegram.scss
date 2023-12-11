@@ -1,0 +1,197 @@
+.telegram {
+    position: relative;
+    overflow: hidden;
+    h4 {
+        color: $white;
+        font-family: $extraBold-word;
+        margin-bottom: 16px;
+    }
+    &__background {
+        background: url(../../../../../images/img-index/background-telegram.webp) no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    &__background-blue {
+        background: #002b6cb3;
+        padding: 40px 0;
+    }
+
+    &__width {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+    &__qr {
+        margin-right: 40px;
+        &-img {
+            border-radius: 5px;
+        }
+        .telegram__btn {
+            display: none;
+        }
+    }
+    &__text {
+        margin-right: 164px;
+        font-family: $medium-word;
+        font-size: $fs18;
+        color: $white;
+    }
+    &__title svg {
+        display: none;
+    }
+    &__text a {
+        display: inline-block;
+        font-family: $bold-word;
+        color: $white;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    &__btn {
+        @include btn(14px 40px, 20px);
+        background-color: $crimson;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .telegram {
+        &__background-blue {
+            padding: 35px 0;
+        }
+        &__width {
+            max-width: 1200px;
+        }
+        &__text {
+            font-size: $fs16;
+            margin-right: 105px;
+        }
+        &__qr-img {
+            width: 130px;
+        }
+        &__btn {
+            font-size: $fs18;
+        }
+    }
+}
+@media screen and (max-width: 1279px) {
+    .telegram {
+        &__background-blue {
+            padding: 30px 0;
+        }
+        &__width {
+            max-width: 970px;
+        }
+        &__text {
+            margin-right: 50px;
+            font-size: $fs14;
+        }
+        &__qr-img {
+            width: 120px;
+        }
+        &__btn {
+            font-size: $fs16;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .telegram {
+        &__background {
+            background-size: auto;
+        }
+        &__background-blue {
+            padding: 30px 20px;
+        }
+        &__width {
+            max-width: 100%;
+        }
+
+        &__qr-img {
+            width: 130px;
+        }
+        &__text {
+            margin-right: 25px;
+        }
+        &__text, &__text a {
+            font-size: $fs16;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .telegram {
+        &__background {
+            background-size: 220%;
+        }
+        &__content {
+            align-items: flex-start;
+        }
+        &__qr {
+            margin-right: 30px;
+            &-img {
+                width: 140px;
+                margin-bottom: 5px;
+            }
+            .telegram__btn {
+                display: block;
+                padding: 10px 0;
+                text-align: center;
+                width: 100%;
+            }
+        }
+        &__btn {
+            display: none;
+            font-size: $fs14;
+        }
+        &__text {
+            margin-right: 0;
+            width: 60%;
+            line-height: 155%;
+        }
+        &__text, &__text a {
+            font-size: $fs14;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .telegram {
+        &__background {
+            background-size: 300%;
+        }
+        &__content {
+            flex-direction: column-reverse;
+        }
+        &__qr-img {
+            display: none;
+        }
+        &__text {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        h4 {
+            margin-bottom: 0;
+        }
+        &__title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            svg {
+                display: block;
+                width: 25px;
+                margin-right: 10px;
+            }
+        }
+        &__qr {
+            width: 100%;
+            .telegram__btn {
+                padding: 14px 0;
+            }
+        }
+    }
+}

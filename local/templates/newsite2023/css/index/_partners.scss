@@ -1,0 +1,193 @@
+.partners {
+    padding: 70px 0;
+    background-color: $white;
+    color: $textGrey;
+    text-align: center;
+    &__width {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        margin-top: 58px;
+    }
+    &__blocks {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+    }
+    &__block {
+        font-family: $regular-word;
+        font-size: $fs14;
+        line-height: 170%;
+    }
+    &__block svg {
+        height: 65px;
+        margin-bottom: 25px;
+    }
+    &__block:first-child svg, &__block:nth-child(4) svg {
+        width: 180px;
+    }
+    &__block:nth-child(5) svg {
+        width: 150px;
+    }
+    &__block mark {
+        font-family: $extraBold-word;
+        color: $crimson;
+        background: none;
+    }
+
+    &__text {
+        margin-bottom: 35px;
+        font-family: $medium-word;
+        font-size: $fs16;
+        line-height: 170%;
+    }
+    &__points {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0;
+    }
+    &__point {
+        @include crimsonPoints;
+        margin-right: 7px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .partners {
+        padding: 60px 0;
+        &__width {
+            max-width: 1200px;
+        }
+
+        &__block svg {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        &__block:first-child svg, &__block:nth-child(4) svg {
+            width: 160px;
+        }
+        &__block:nth-child(5) svg {
+            width: 130px;
+        }
+        &__description {
+            font-size: $fs12;
+        }
+        &__text {
+            font-size: $fs14;
+        }
+    }
+}
+@media screen and (max-width: 1279px) {
+    .partners {
+        padding: 50px 0;
+        &__width {
+            max-width: 970px;
+        }
+
+        &__block {
+            line-height: 150%;
+        }
+        &__block svg {
+            height: 55px;
+            margin-bottom: 15px;
+        }
+        &__block:first-child svg, &__block:nth-child(4) svg {
+            width: 150px;
+        }
+        &__block:nth-child(5) svg {
+            width: 110px;
+        }
+        &__point {
+            margin-right: 5px;
+        }
+        &__text {
+            margin-bottom: 25px;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .partners {
+        padding: 50px 20px;
+        &__width {
+            max-width: 100%;
+        }
+
+        &__blocks {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__block {
+            width: 30%;
+        }
+        &__description {
+            font-size: $fs14;
+        }
+        &__text {
+            font-size: $fs16;
+        }
+        &__points {
+            margin: 35px 0;
+        }
+        &__point {
+            width: 7px;
+            height: 7px;
+            margin-right: 7px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .partners {
+        &__content {
+            margin-top: 40px;
+        }
+        &__blocks {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__block {
+            margin-bottom: 20px;
+            width: 65%;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__block svg {
+            margin-bottom: 5px;
+            height: auto;
+            width: 140px;
+        }
+        &__block:first-child svg, &__block:nth-child(4) svg, &__block:nth-child(5) svg {
+            width: 140px;
+        }
+        &__text {
+            font-size: $fs14;
+        }
+        &__point {
+            width: 5px;
+            height: 5px;
+            margin-right: 5px;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .partners {
+        &__block {
+            width: 80%;
+            svg {
+                width: 125px;
+            }
+        }
+        &__block:first-child svg, &__block:nth-child(4) svg, &__block:nth-child(5) svg {
+            width: 125px;
+        }
+        &__points {
+            margin: 25px 0;
+        }
+    }
+}

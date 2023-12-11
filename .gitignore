@@ -1,0 +1,9 @@
+.idea/
+/.access.php
+/.htaccess
+/desktop.ini
+/test/
+test-slide.scss
+.sass-cache/
+lang/
+themes/

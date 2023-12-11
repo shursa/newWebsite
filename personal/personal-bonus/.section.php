@@ -1,0 +1,3 @@
+<?
+$sSectionName="personal_bonus";
+?>

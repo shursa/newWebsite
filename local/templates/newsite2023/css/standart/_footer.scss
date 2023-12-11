@@ -1,0 +1,348 @@
+.footer {
+    font-family: $regular-word;
+    h3 {
+        color: $white;
+        margin-bottom: 20px;
+        br {
+            display: none;
+        }
+    }
+    h4 {
+        color: $white;
+        margin-bottom: 30px;
+    }
+    &__top {
+        background-color: $darkenGrey;
+        padding: 70px 0;
+        font-size: $fs14;
+    }
+    &__width {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text {
+        display: flex;
+    }
+    &__text-block:first-child {
+        margin-right: 135px;
+    }
+    &__links:first-child {
+        margin-bottom: 55px;
+    }
+    &__link {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: $lightenGrey;
+        transition: .2s;
+    }
+    &__link:hover {
+        color: $white;
+    }
+    &__link:hover svg {
+        fill: $white;
+    }
+    &__link svg {
+        width: 15px;
+        margin-right: 10px;
+        fill: $lightenGrey;
+        transition: .2s;
+    }
+    &__num {
+        font-family: $regular-num;
+    }
+    &__link:hover &__mail {
+        text-decoration: underline;
+    }
+    &__schedule &__link{
+        cursor: default;
+    }
+    &__schedule-hover:hover &__link {
+        color: $white;
+    }
+
+    &__ymap iframe {
+        width: 535px;
+        height: 422px;
+        border: none;
+        margin-bottom: 20px;
+    }
+    &__address {
+        display: flex;
+        align-items: center;
+        color: $lightenGrey;
+        font-family: $semiBold-word;
+        transition: .2s;
+    }
+    &__address svg {
+        width: 15px;
+        height: 19px;
+        fill: $lightenGrey;
+        margin-right: 7px;
+        transition: .2s;
+    }
+    &__address &__num {
+        font-family: $bold-num;
+    }
+    &__address:hover {
+        color: $white;
+    }
+    &__address:hover svg {
+        fill: $white;
+    }
+
+    &__bottom {
+        padding: 40px 0;
+        background-color: $black;
+        color: #525860;
+    }
+    &__bottom-content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__medal {
+        margin-right: 35px;
+    }
+    &__medal img {
+        width: 220px;
+    }
+    &__bottom-text {
+        position: relative;
+    }
+    &__text-achievements, &__link-achievements {
+        font-size: $fs20;
+    }
+    &__text-achievements {
+        margin-bottom: 20px;
+    }
+    &__text-achievements a {
+        color: inherit;
+        transition: .2s;
+        &:hover {
+            color: $white;
+        }
+    }
+    &__link-achievements {
+        color: #525860;
+        transition: .2s;
+        &:hover {
+            color: $white;
+        }
+    }
+    &__privacy {
+        position: absolute;
+        bottom: 0;
+        font-size: $fs18;
+        color: $white;
+    }
+    &__privacy a {
+        color: $white;
+        transition: .2s;
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .footer {
+        h4 {
+            margin-bottom: 20px;
+        }
+        &__top {
+            padding: 60px 0;
+            font-size: $fs12;
+        }
+        &__width {
+            max-width: 1200px;
+        }
+
+        &__link {
+            margin-bottom: 15px;
+        }
+        &__ymap iframe {
+            width: 480px;
+            height: 367px;
+        }
+
+        &__medal img {
+            width: 200px;
+        }
+        &__text-achievements, &__link-achievements {
+            font-size: $fs18;
+        }
+        &__privacy {
+            font-size: $fs16;
+        }
+    }
+}
+@media screen and (max-width: 1279px) {
+    .footer {
+        &__top {
+            padding: 50px 0;
+        }
+        &__width {
+            max-width: 970px;
+        }
+
+        &__text-block:first-child {
+            margin-right: 60px;
+        }
+        &__links:first-child {
+            margin-bottom: 45px;
+        }
+        &__ymap iframe {
+            width: 400px;
+            height: 300px;
+        }
+
+        &__medal img {
+            width: 180px;
+        }
+        &__text-achievements, &__link-achievements {
+            font-size: $fs16;
+        }
+        &__privacy {
+            font-size: $fs14;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .footer {
+        h3 {
+            margin: 0;
+            br {
+                display: block;
+            }
+        }
+        &__top {
+            padding: 50px 20px;
+            font-size: $fs16;
+        }
+        &__width {
+            max-width: 100%;
+        }
+
+        &__content {
+            flex-direction: column;
+        }
+        &__text {
+            margin-bottom: 25px;
+            justify-content: space-around;
+        }
+        &__text-block:first-child {
+            margin-right: 0;
+        }
+
+        &__ymap iframe {
+            width: 100%;
+        }
+
+        &__bottom {
+            padding: 40px 20px;
+        }
+        &__bottom-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        &__medal {
+            margin-right: 25px;
+        }
+        &__medal img {
+            width: 90px;
+        }
+        &__text-achievements, &__link-achievements {
+            font-size: $fs18;
+        }
+        &__text-achievements {
+            margin-bottom: 15px;
+        }
+        &__link-achievements {
+            display: block;
+            margin-bottom: 20px;
+        }
+        &__privacy {
+            position: static;
+            font-size: $fs16;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .footer {
+        &__top {
+            font-size: $fs14;
+        }
+        &__text {
+            justify-content: space-between;
+        }
+        &__links:first-child {
+            margin-bottom: 25px;
+        }
+        h4 {
+            margin-bottom: 15px;
+        }
+
+        &__medal {
+            margin-right: 20px;
+        }
+        &__text-achievements, &__link-achievements {
+            font-size: $fs16;
+        }
+        &__privacy {
+            font-size: $fs14;
+        }
+    }
+}
+@media screen and (max-width: 610px) {
+    .footer {
+        h3 {
+            br {
+                display: none;
+            }
+        }
+        &__text {
+            flex-direction: column;
+        }
+        &__text-block:first-child {
+            margin-bottom: 20px;
+        }
+        &__links:first-child {
+            margin-bottom: 35px;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .footer {
+        h3 {
+            margin-bottom: 20px;
+        }
+        &__ymap iframe {
+            height: 250px;
+        }
+        &__address {
+            flex-wrap: wrap;
+        }
+
+        &__bottom {
+            text-align: center;
+        }
+        &__bottom-title {
+            flex-direction: column-reverse;
+        }
+        &__medal {
+            width: 100%;
+            margin: 0;
+        }
+        &__medal img {
+            width: 70%;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.pay {
+    padding: 70px 0;
+    background-color: $darkenGrey;
+    h3 {
+        color: $white;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    h4 {
+        margin-top: 20px;
+        color: $white;
+    }
+
+    &__width {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    &__ways {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 155px;
+    }
+    &__way {
+        text-align: center;
+    }
+    svg {
+        width: 55px;
+        height: 55px;
+        fill: $crimson;
+    }
+    &__line {
+        width: 30%;
+        height: 1px;
+        margin: 15px auto;
+        background-color: $crimson;
+    }
+    &__text {
+        font-family: $medium-word;
+        font-size: $fs14;
+        line-height: 170%;
+        color: $white;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .pay {
+        padding: 60px 0;
+        &__width {
+            max-width: 1200px;
+        }
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__ways {
+            gap: 110px;
+        }
+        &__text {
+            font-size: $fs12;
+        }
+    }
+}
+@media screen and (max-width: 1279px) {
+    .pay {
+        padding: 50px 0;
+        &__width {
+            max-width: 970px;
+        }
+        svg {
+            width: 45px;
+            height: 45px;
+        }
+
+        &__ways {
+            gap: 65px;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .pay {
+        padding: 50px 20px;
+        &__width {
+            max-width: 100%;
+        }
+        &__text {
+            font-size: $fs14;
+        }
+        &__ways {
+            gap: 30px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .pay {
+        &__ways {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        &__text {
+            margin: 0 auto;
+            width: 70%;
+        }
+        h3 {
+            margin-bottom: 40px;
+        }
+        h4 {
+            margin-top: 5px;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .pay {
+        &__text {
+            width: 90%;
+        }
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+        &__line {
+            width: 60%;
+        }
+    }
+}
